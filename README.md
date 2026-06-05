@@ -15,3 +15,8 @@ This image is inline ![image](https://cerebro.akindeji.net/kbassets/akindeji/cat
 | ------ | ---------------- |
 | cell1  | cell2            |
 | cell3  | cell4<br/>cell4a |
+
+
+> ``$
+> rm -rf /run/user/$(id -u)/speech-dispatcher/
+> ``
