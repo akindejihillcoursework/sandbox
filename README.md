@@ -2,21 +2,21 @@
 
 I'm just playing with markdown.
 
+&nbsp;
+|**Something you should know:**<br>Don't eat yellow snow!|
+|-|
 
-|![image](https://cerebro.akindeji.net/kbassets/akindeji/cat.png)|
+&nbsp;
+
+|***If debugging is the process of removing<br>software bugs, then programming must<br>be the process of putting them in***|
+|-|
+|- Edsger Dijkstra|
+
+
+|![battlecat](https://cerebrokb.akindeji.net/static/smallcat.png)|
 |-|
 
 
-
-
-This image is inline ![image](https://cerebro.akindeji.net/kbassets/akindeji/cat.png) and there is stuff after it too.
-
-| title1 | title2           |
-| ------ | ---------------- |
-| cell1  | cell2            |
-| cell3  | cell4<br/>cell4a |
-> caption goes here
-
-> ``$
-> rm -rf /run/user/$(id -u)/speech-dispatcher/
-> ``
+|![battlecat](https://cerebrokb.akindeji.net/static/smallcat.png)|
+|-|
+|Image from cleanpng.com<br>by [Taishna](https://www.cleanpng.com/users/@taishna.html)|
