@@ -17,6 +17,7 @@ Adding simple text features like headings, bold, italics, etc is extremely simpl
 |###|<h3>
 |####|<h4>|
 |#####|<h5>|
+caption
 
 The word "Headings" above is a good example of a heading.
 
