@@ -20,3 +20,8 @@ I'm just playing with markdown.
 |![battlecat](https://cerebrokb.akindeji.net/static/smallcat.png)|
 |-|
 |Image from cleanpng.com<br>by [Taishna](https://www.cleanpng.com/users/@taishna.html)|
+
+
+There are spaces here...
+&nbsp; &nbsp; &nbsp; &nbsp;
+did you see them?
