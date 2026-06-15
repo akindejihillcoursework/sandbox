@@ -9,13 +9,14 @@ Adding simple text features like headings, bold, italics, etc is extremely simpl
 
 ### Headings
 
-> |hashes|equivalent tag|
-> |-|-|
-> |#|<h1>|
-> |##|<h2>|
-> |###|<h3>
-> |####|<h4>|
-> |#####|<h5>|
+
+|hashes|equivalent tag|
+|-|-|r
+|#|<h1>|
+|##|<h2>|
+|###|<h3>
+|####|<h4>|
+|#####|<h5>|
 
 The word "Headings" above is a good example of a heading.
 
