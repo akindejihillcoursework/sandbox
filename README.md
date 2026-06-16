@@ -1,4 +1,4 @@
-Thanks to the [markdown-it](https://github.com/markdown-it/markdown-it) for Node and [Marko](https://pypi.org/project/marko/) for Python this knowledge base interprets standard Markdown if you wish to use it.  Markdown allows you to organize your thoughts by adding emphasis to phrases, adding heading, links, code segments and even images.  
+    Thanks to the [markdown-it](https://github.com/markdown-it/markdown-it) for Node and [Marko](https://pypi.org/project/marko/) for Python this knowledge base interprets standard Markdown if you wish to use it.  Markdown allows you to organize your thoughts by adding emphasis to phrases, adding heading, links, code segments and even images.  
 
 This article is just a quick start reference guide.  There is a great Markdown tutorial and reference at **[Commonmark.org](https://commonmark.org/help/tutorial)**  Be aware that this blog supports much of but not 100% of Markdown's features.
 
