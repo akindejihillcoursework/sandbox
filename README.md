@@ -9,7 +9,13 @@ Adding simple text features like headings, bold, italics, etc is extremely simpl
 
 ### Headings
 
->>
+
+caption
+|column1|column2|
+|-|-|
+|data1|data2|
+
+
 caption
 |hashes|equivalent tag|
 |-|-|
