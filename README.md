@@ -16,11 +16,11 @@ Adding simple text features like headings, bold, italics, etc is extremely simpl
 Heading levels
 |hashes|equivalent tag|
 |-|-|
-|#|<h1>|
-|##|<h2>|
-|###|<h3>
-|####|<h4>|
-|#####|<h5>|
+|#|``<h1>``|
+|##|``<h2>``|
+|###|``<h3>``|
+|####|``<h4>``|
+|#####|``<h5>``|
 :::
 
 The word "Headings" above is a good example of a heading.
