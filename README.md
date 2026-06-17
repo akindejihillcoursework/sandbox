@@ -72,7 +72,10 @@ Notice how the "**Heading 1**" (``#``) above is represented in the Table of Cont
     ##c Centered Headings
 :::
 
-##c Centered Headings
+:::center
+
+## Centered Headings
+:::
 
 Usually headings are left justified, but maybe once in a while you want a heading to be centered for some reason.  This CMS also includes non-standard markers for placing centered headers.  Just add a "c" after the hash marks to turn a standard heading into a centered heading.  
 
