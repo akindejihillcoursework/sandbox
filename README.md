@@ -13,6 +13,7 @@ Adding simple text features like headings, bold, italics, etc is extremely simpl
 
 ### Headings
 :::float-right
+
 Heading levels
 |hashes|equivalent tag|
 |-|-|
@@ -21,6 +22,7 @@ Heading levels
 |###|``<h3>``|
 |####|``<h4>``|
 |#####|``<h5>``|
+
 :::
 
 The word "Headings" above is a good example of a heading.
