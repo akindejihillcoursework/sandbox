@@ -37,12 +37,14 @@ Browsers typically render ``<h1>`` tags as very large text and ``<h2>``, ``<h3>`
 
 :::center
 :::float-left
+
 Heading syntax
     # Heading 1
     ## Heading 2
     ### Heading 3
 :::
 :::float-right
+
 # Heading 1
 ## Heading 2
 ### Heading 3
