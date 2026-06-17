@@ -114,7 +114,9 @@ To add **emphasis** to a phrase:
 
 :::center
 example
+~~~
     I'm feeling **bold** today
+~~~
 :::
 &nbsp;
 
