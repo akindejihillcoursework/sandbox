@@ -113,6 +113,7 @@ To add **emphasis** to a phrase:
 * Surround it with  ``~~`` double tildes for ~~Striked out~~ text
 
 :::center
+
 example
 ~~~
     I'm feeling **bold** today
