@@ -1,17 +1,14 @@
-  Thanks to the [markdown-it](https://github.com/markdown-it/markdown-it) for Node and [Marko](https://pypi.org/project/marko/) for Python this knowledge base interprets standard Markdown if you wish to use it.  Markdown allows you to organize your thoughts by adding emphasis to phrases, adding heading, "links", code segments and even images.  
+  Thanks to the [markdown-it](https://github.com/markdown-it/markdown-it) for Node and [Marko](https://pypi.org/project/marko/) for Python this knowledge base interprets standard Markdown if you wish to use it.  Markdown allows you to organize your thoughts by adding emphasis to phrases, adding headings, "links", code segments, and even images.  
 
-  The goal is to use **Markdown** in this **C**ontent **M**anagement **S**ystem such that your documents are portable --- can be read in Markdown viewers, or copy and pasted from Markdown documents to instantly render nicely in HTML.  It uses formatting that is interpreted aesthetically in HTML, while keeping the source valid and compatible with other markdown interpreters.  It accomplishes this through syntax that has natural fallbacks when viewed in standard Markdown renders.  
+  The goal is to use **Markdown** in this **C**ontent **M**anagement **S**ystem such that your documents are portable --- can be read in Markdown viewers (with minimal tweaks), or be copy and pasted from Markdown documents to instantly render nicely in HTML.  It uses formatting that is interpreted aesthetically in HTML, while keeping the source valid and compatible with other markdown interpreters.  It accomplishes this through syntax that has natural fallbacks when viewed in standard Markdown renderers.  
 
-  This article is just a quick start reference guide.  I recommend reading through this one time, but don't worry about trying to memorize everything.  Just get a good idea of what kind of formatting and content you can use in this application, so that when you need it you know what you can look up.  The syntax is so simply, you will automatically memorize it without trying after looking things up a few times.
+  This article is just a quick start reference guide.  I recommend reading through this completely one time, but don't worry about trying to memorize everything.  Just get a good idea of what kind of formatting and content you can use in this application, so that when you need it you know what you can look up.  The syntax is so simple, you will automatically memorize it without trying, after looking things up a few times.
 
 There is also a great Markdown tutorial and reference at **[Commonmark.org](https://commonmark.org/help/tutorial)**
 
 ---
 
-## Text features
-Adding simple text features like headings, bold, italics, etc is extremely simple.  
-
-### Headings
+## Headings
 :::float-right
 
 Heading levels
@@ -39,7 +36,7 @@ Browsers typically render ``<h1>`` tags as very large text and ``<h2>``, ``<h3>`
 :::float-left
 
 Heading syntax
-    # Heading 1    
+    # Heading 1
     ## Heading 2
     ### Heading 3
 :::
@@ -48,10 +45,16 @@ Heading syntax
 # Heading 1
 ## Heading 2
 ### Heading 3
+
+
 :::
 :::
 
-You'll want to use **heading 2** ``##`` for major sections, and **heading 3** ``###`` for smaller paragraph groupings or headings.  **Heading 4** is available if you need a sub-sub section (for semantic readability) but is basically just a regular bold header.
+Always keep in mind that headings are just as important for semantic readability and navigation, as they are for aethetics.
+
+You'll want to use **heading 2** ``##`` for major sections, and **heading 3** ``###`` for sub-sections.  **Heading 4** is useful to denote smaller paragraph groupings or headings, but by default looks the same as bold text.  
+
+>Heading levels 5 and 6 are also available but they look like regular text.  If you need to go this deep, then it might be better to consider re-organizing your document.
 &nbsp;
 
 ### There can only be one
@@ -61,27 +64,31 @@ You'll want to use **heading 2** ``##`` for major sections, and **heading 3** ``
 :::
 <h*n*> tags have a semantic meaning in HTML.  They let the browser know that it is a certain type of heading.  ``<h1>`` tags are for the main title of the page, and there should only be one.  This CMS disables the use of *real* ``<h1>`` tags in articles, because the **one and only** ``<h1>`` tag will be used by the article title.  For Markdown document compatibility ``#`` lines will still be styled as the largest text in an article, so you can still copy and paste your markdown documents into an article without an issue.  However, to maintain ADA compliance they will actually be rendered as ``<h2>`` tags in the html code.
 
-It's much better to just avoid the use of ``#`` markers for subtitles in favor of ``##`` markers.  Semantically the ``##`` lets browsers know that the line is an important subtitle, but not the main title for the page.  These semantics are very important for keyboard navigation, SEO, accessibility, and ADA compliance.
+It's much better to just avoid the use of ``#`` markers for major section headers in favor of ``##`` markers.  Semantically the ``##`` lets browsers know that the line starts a major section, but is not the main title for the page.  These semantics are very important for keyboard navigation, SEO, accessibility, and ADA compliance.
 
 
 #### Don't confuse the navigation
 
-Notice how the "**Heading 1**" (``#``) above is represented in the Table of Contents as a sibling to "**Heading 2**" (``##``) and not as a parent.  Both headings should be nested within the "*Text Features*" heading because that's the content heading that they are both under, but they are not because "**Heading 1**"  breaks the hierarchy.   which makes navigation more confusing.  That's exactly how it behaves in a screen reader as well.  So, if you must use an ``<h1>`` tag, try to do so only once, and at the top of the page as a subtitle.  That will minimize confusion.
+Notice how the "**Heading 1**" (``#``) above is represented in the Table of Contents as a sibling to "**Heading 2**" (``##``) and not as a parent, because as already mentioned, it's actually rendered as an ``<h2>`` tag.  
+
+Also, both headings belong nested within the "*Headings*" topic but they are not because using an equal or higher heading tag like "**Heading 1**" breaks the hierarchy and starts a new one.  If headings aren't used properly it makes navigation confusing.  In the way that it makes the TOC confusing, that's exactly how it makes a screen reader confused as well.  So, place your headings in the proper order, without skipping over any.  
+
+Further more, if you must use an ``<h1>`` tag, try to do so only once, and at the top of the page as a subtitle.  That will minimize confusion.
 
 &nbsp;
 :::center
 
-    ##c Centered Headings
+    ###c Centered Headings
 :::
 
 :::center
 
-## Centered Headings
+### Centered Headings
 :::
 
 Usually headings are left justified, but maybe once in a while you want a heading to be centered for some reason.  This CMS also includes non-standard markers for placing centered headers.  Just add a "c" after the hash marks to turn a standard heading into a centered heading.  
 
-==Be aware== that these will not work in any other Markdown renderer.  An alternative is to use positioning fences instead.
+==Be aware== that these will not work in any other Markdown renderer.  An alternative is to use [positioning fences](/posts/2#POSITIONING-MEDIA) instead.
 
 
 &nbsp;
@@ -113,11 +120,8 @@ To add **emphasis** to a phrase:
 * Surround it with  ``~~`` double tildes for ~~Striked out~~ text
 
 :::center
-
 example
-~~~
     I'm feeling **bold** today
-~~~
 :::
 &nbsp;
 
@@ -223,6 +227,25 @@ example
 > And sometimes you need a ***quote***
 
 
+## The q and br tags
+
+For simplicity as well as security, articles are formatted almost exclusively using markdown syntax.  HTML written into articles is not rendered, but instead displayed as literal text.  However there are two very specific exceptions.
+
+1. The **quote** tag ``<q>...</q>`` is supported.  If you wish to semantically mark a short passage as a quote, or even attach a citation to it, you can just wrap the quoted content with the ``<q>`` tag.  The browser will automatically add the appropriate quotation marks.
+
+:::center
+
+    According to so and so <q cite="https://sonso.com"> You are what you eat.</q>
+:::
+&nbsp;
+
+&nbsp; This transforms your quotes from simple text into structured data. While a human sees quotation marks, a computer sees a string of confusing, inconsistent characters; by using ``<q>``, you give machines a clear, unambiguous map of your content, ensuring your insights are perfectly preserved, correctly cited, and fully accessible to every reader.
+
+
+2. **The line break tag** ``<br />`` can be used in Markdown table cells.  The source text for a table row must remain on one line, which means the only way to create a line break is to use this tag.
+
+
+
 ## Media
 ---
 Images, audio, and video can be embedded into posts in a very similar syntax to links.  However take note that there is no Markdown standard for embedding audio or video.  This feature is provided in this CMS through non-standard markup extensions. 
@@ -289,7 +312,7 @@ You can also embed:
 
 ### Media as links
 
-You can also use a media item as a link by nesting the media syntax inside of the square brackets of the link marker.  This can really come in handy when you want to display a very large image that is too big for the article window.  Images are automatically scaled down to fit the window.  When you need to show a very big image you can display a smaller version of it, and link it to a larger version. 
+You can also use a media item as a link by nesting the media syntax inside of the square brackets of the link marker.  For example, when you need to share a very big image you can display a smaller version of it, and link it to a larger version. 
 
 *Example, Linking an image*
 ```markdown
@@ -309,9 +332,9 @@ Inserting tables into markdown is easy and intuitive.
 ```markdown
 Example Table Caption
 |Category 1|Category 2|Category 3|
-|-|-|-|
-|value 1|value 2|value 3|
-|value 1a|value 2a|value3a|
+|----------|----------|----------|
+|value 1   |value 2   |value 3   |
+|value 1a  |value 2a  |value3a   |
 ```
 :::
 &nbsp;
@@ -322,19 +345,27 @@ Example Table Caption
 |value 1a|value 2a|value3a|
 
 Tables can be used to show data in a neat and tidy format.  
-To create a table use pipes ( ``|`` under the backspace key ) to separate cells as shown in the examples.  The top row must contain the labels, and the second row must contain a row model that shows how many columns each row will have, depicted with pipes and dashes, and it should match the header row.  There must be the same number of columns in each row, but they do not have to line up.
+To create a table:
+* use pipes ( ``|`` under the backspace key ) to separate cells as shown in the examples.  
+* The top row must contain the labels
+* The second row must contain a row model that shows how many columns each row will have.  It's depicted with pipes ``|`` and dashes ``-``, and can match the size of the header row to make it easier to visualize, but they only require one dash.  
+* There must be the same number of columns in each row, but they do not have to line up.
+* A table row must be defined on one line; pressing enter to continue cell content on a new line will break the table.  To insert a line break in a table cell's content, use the ``<br />``  tag
+
+Notice that you can place an **optional caption** in a table by immediately preceding it with a line of text.  A brief but descriptive table caption is very important for accessibility.
+
 &nbsp;
+|**Did you know?** Each row of a table must be on the same line<br /> in your source, but you can still use *html break tags* ``<br />``<br />inside a table cell to render line breaks.|
+|-|
 
-Notice that you can place an optional caption in a table by immediately preceding it with a line of text.  A brief but descriptive table caption is very important for accessibility.
-
-
+&nbsp;
 
 ## Figures: combining tables and media
 ---
 
-HTML has a ``<figure>`` tag for displaying different types of media with or without a caption.  You can mimic this feature with markdown by inserting media into tables.  Doing so will give you something sort of like an HTML figure.
+HTML has a ``<figure>`` tag for displaying different types of media with or without a caption.  You can mimic this feature with markdown by inserting media into tables.  Doing so will produce something very close in appearance to an HTML figure.
 
-Fortunately this CMS can take those approximate figures and render them as real figures, while your markdown stays completely valid so it still works in other interpreters.  
+This CMS can take those '*make shift*' figures and render them as real figures, while your markdown stays completely valid so it still works in other interpreters.  
 
 ### Text-Box
 ---
@@ -351,6 +382,10 @@ Placing text in a table with one cell will create a text box.  These are often c
 |-|
 
 &nbsp;
+These are great for:
+* Emphasis and visual decoration - This is what you want to use for breaking up the 'monotony' of long sections of text, instead of a blockquote.
+* Alerts, warning, or messages that are related to the content.  
+
 
 ### Quote
 ---
@@ -359,12 +394,12 @@ Create a quote box using a table with two cells.  Put the quote in the top cell,
 
 
 ```markdown
-|***If debugging is the process of removing<br>software bugs, then programming must<br>be the process of putting them in***|
+|***If debugging is the process of removing<br />software bugs, then programming must<br />be the process of putting them in***|
 |-|
 |- Edsger Dijkstra|
 ```
 &nbsp; 
-|***If debugging is the process of removing<br>software bugs, then programming must<br>be the process of putting them in***|
+|***If debugging is the process of removing<br />software bugs, then programming must<br />be the process of putting them in***|
 |-|
 |- Edsger Dijkstra|
 
@@ -393,61 +428,54 @@ You can create captioned media using a table with two cells by placing the media
 ```markdown
 |![battle cat](../smallcat.png)|
 |--------------------------|
-|Image from cleanpng.com<br>by [Taishna](https://.../@taishna.html)|
+|Image from cleanpng.com<br />by [Taishna](https://.../@taishna.html)|
 ```
 &nbsp;
 
 |![battlecat](https://cerebrokb.akindeji.net/static/smallcat.png)|
 |-|
-|Image from cleanpng.com<br>by [Taishna](https://www.cleanpng.com/users/@taishna.html)|
+|Image from cleanpng.com<br />by [Taishna](https://www.cleanpng.com/users/@taishna.html)|
 
 &nbsp;
 
 
-## Positioning media
+## Positioning Fences
 ---
-> *Example floated chart*
+
+:::float-right
+*Example right floated chart*
 ```
+:::float-right
+
+|Category 1|Category 2|Category 3|
+|-|-|-|
+|value 1|value 2|value 3|
+|value 1a|value 2a|value3a|
+
+:::
+```
+:::
+&nbsp;
+
 :::float-right
 |Category 1|Category 2|Category 3|
 |-|-|-|
 |value 1|value 2|value 3|
 |value 1a|value 2a|value3a|
 :::
-```
-&nbsp;
 
-:::float-right
-|Category 1|Category 2|Category 3|
-|-|-|-|
-|value 1|value 2|value 3|
-|value 1a|value 2a|value3a|
-:::
+In this CMS application, media items (other than images) are centered by default, but you can float them to the left or right by encapsulating them in positioning fences.  This allows you to place a media item right next to a paragraph or explanation about it.
 
-In this CMS application, media items (other than images) are centered by default, but you can float them to the left by prepending a blockquote mark ``>`` in front of it.  This allows the text after it to float to the right.  This allows you to place a media item right next to a paragraph or explanation about it.
+To use a fence to position an item, encapulate the whole element in a fence opening like ``:::center`` and a fence closing ``:::``.  
 
 
-> *Example right floated chart*
-```
->> |Category 1|Category 2|Category 3|
->> |----------|----------|----------|
->> |value 1   |value 2   |value 3   |
->> |value 1a  |value 2a  |value3a   |
-```
-
-
->>|Category 1|Category 2|Category 3|
->>|-|-|-|
->>|value 1|value 2|value 3|
->>|value 1a|value 2a|value3a|
-
-If you place more than one blockquote symbol before a media item it will float to the right instead.
-
-&nbsp;
-|**Note**: Floated tables require the blockquote symbols before each line|
-|-|
-
-&nbsp;
+|Fence|Position|
+|-|-|
+|``:::center``|Center|
+|``:::float-right``|Right|
+|``:::float-left``|Left|
+|``:::sr-only``|Invisible to browsers but <br /> visible to screen readers|
+|``:::no-sr``|Invisible to screen readers|
 
 
 >*Example floated image*
@@ -491,10 +519,14 @@ Creating variables
 
 Your code will be displayed with preserved spacing in a special box like the one above.  The **'language'** metadata after the opening marks are optional, but if you use them properly it will enable syntax highlighting for the coding language you are using.
 
-Another feature of **fenced code blocks** in this application is the "**copy to clipboard**" button that appears when the mouse is over the block.  This enables readers to easily copy the code from the document.
-
 Notice the **optional caption** "Creating variables" was created by writing a line of text directly over the fenced code.  Brief and descriptive captions should always be used to help make the document highly accessible.
 
+Another feature of **fenced code blocks** in this application is the "**copy to clipboard**" button that appears when the mouse is over the block.  This enables visitors to easily copy the code from the document.  
+&nbsp;
+|**Accessibility concern**: Hearing the announcement "**clickable button, copy to clipboard**" from a screen reader gets quite annoying after a while when *fenced code blocks* are over used.  You can use the *indented code block* to render preformated text without the button.  It's highly recommend to use that whenever you do not need to display programming code.|
+|-|
+
+&nbsp;
 
 ### Indented Code Blocks
 
@@ -506,12 +538,20 @@ Example syntax
         to create an indented code block.
 
 Notice that the caption is written immediately above the first indented line.  Using a brief descriptive caption is highly recommended.
+&nbsp;
+|**Portability vs Accessibility**: Indented code blocks will not render in the Github markdown viewer unless there is a space between the caption line and the code block.  Although screen readers will still read the line, this breaks the explicit link between the caption and the block.|
+|-|
 
 **They are great to use for:**
 * **Examples/Scenarios** --- A hypothetical situation or a concrete example to illustrate a concept.
-* Displaying preformatted text --- When it is not code and you don't want a "clickable button, copy to clipboard" button announcement breaking up the flow for screen readers.
+* **Preformatted text** --- that is not code.
+* **Accessibility** --- There is no "copy" button.  Use this instead when you don't want a screen reader to break up the flow by announcing  "clickable button, copy to clipboard".  That gets very annoying, very quickly.
 
+:::sr-only
+ASCII art by [Joan G. Stark]
+:::
 
+:::no-sr
 ASCII art by [Joan G. Stark](https://www.asciiart.eu/art/8a42e16bbfdc388a) and folder diagram
          .-"-,
         /_ _  \      Folder Tree
@@ -522,16 +562,17 @@ ASCII art by [Joan G. Stark](https://www.asciiart.eu/art/8a42e16bbfdc388a) and f
           \__(/-"      ├── opt
          __|||__       ├── usr
     jgs ((__|__))      └── var
-
-
+:::
+&nbsp;
 ### In-line code segments
 
 Sometimes you don't need a whole block to display an example, but you still want to make it stand out.  We use just two back-ticks `` ` `` for that, instead of three.  The displayed text can be in line with the rest of the text if you wish, or you can put it on its own line.  For instance to display just a variable declaration, you could use the following.
 
-Inline code syntax example
-    Add ``const PI = Math.PI;``
 
-Add ``const PI = Math.PI;``
+Inline code syntax example
+    Add ``const PI = Math.PI;`` to the top.
+
+Add ``const PI = Math.PI;`` to the top.
 
 
 You can display command line interface (CLI) commands by starting the inline code with a prompt symbol.  For instance to display the Linux command to delete a file, you would type the following.
@@ -543,7 +584,7 @@ Enter ``$ rm filename`` to delete the file.
 
 >Enter ``$ rm filename`` to delete the file. 
 
-Use `#` for root shell commands, and `C:\>` for windows CLI commands.  
+Use `#` or `$` for linux shell commands, and `C:\>` for windows CLI commands.  
 
 Ex: Listing files in a folder:
 * Windows: `C:\> dir`
@@ -584,7 +625,7 @@ Task list are a great way to display what you have accomplished, what you still 
 - [ ] fix bugs in my application
 - [-] ~~ship application with bugs~~
 
-|⚠️**Note**: Only the *checked* and *unchecked* markers are in the official markdown standard.  The ``- [-]`` marker for 'excluded' options was added specifically for this CMS, and will not work in other markdown interpreters.|
+|⚠️**Portability Note**: Only the *checked* and *unchecked* markers are in the official markdown standard.  The ``- [-]`` marker for 'excluded' options was added specifically for this CMS, and will not work in other markdown interpreters.|
 |-|
 
 &nbsp;
@@ -610,7 +651,7 @@ Ex.
 
 You can use Roman numeral list items by appending ``r.`` after the number.
 &nbsp;
-|==**Warning:**==  *This roman numeral marker is not standard markdown and will not work in other interpreters.  Only use it for articles specifically meant for this CMS.*|
+|==**Portability Warning:**==  *This roman numeral marker is not standard markdown and will not work in other interpreters.  Only use it for articles specifically meant for this CMS.*|
 |-|
 
 &nbsp;
@@ -673,6 +714,57 @@ Example nested outline:
         2r. Current state
 
 
+## Tabs and Indents
+---
+
+  You may often find youself in need of a way to push a paragraph inwards, away from the left margin.  There is no standard markdown syntax for this, so this interpreter uses methods that are invisible to standard Markdown, while also being quite aesthetic in HTML.  
+
+### Indentation
+
+  To create a typographically pleasing paragraph with a "**hanging indent**" like this, all you have to do is **start a line with 2 spaces**.  This will only work on paragraphs that begin at "column 0" of the document, or the very left edge.  This will not work on paragraphs inside of tables, blockquotes, lists, etc.
+
+### Tabs
+One use case for tabs is to align paragraphs according to a subject hierarchy to improve visual navigation.  For example:
+
+**#1.  Topic** 
+Introduction blah blah
+
+&nbsp; **#1.1 Sub topic**
+&nbsp; Introduction blah blah
+&nbsp;
+&nbsp; Another paragraph
+
+**#2.  Another Topic**  
+&nbsp;
+|⚠️ **Funny story**:  I originally used stacked blockquote markers ``>>>`` to create nested ``<blockquote>`` elements, as if they were tabs.  That was before I learned what a semantic nightmare that caused for accessibility.  The ability to stack blockquotes has been removed from the markdown interpreter in favor of tabs.  **Never use a blockquote just to indent a paragraph**.|
+|-|
+
+&nbsp;
+For me, another common need for a tab has been when I have a very long list item that absolutely requires a line break, and continuation at the same indentation level.
+
+*For example*
+
+Things to do on Mars:
+* Wish you were back on earth --- Once you move to mars you will wonder why we didn't just fix things on a planet that is already habitable.
+&nbsp; ==Instead we decided to ruin the planet and run to a new one.  I realise now that it was all just a scam.==
+* Die --- Your misery will most likely be brief.
+
+Without using a tab, the second line of the first bullet would be at the left margin of the page.  
+&nbsp;
+|**Accessibility concern**: While tabs can visually line up a paragraph with a list, semantically it may break the list up into multiple lists.  A screen reader may inform the visiter of the wrong number of list items|
+|-|
+
+
+Example syntax
+    &nbsp; To indent a whole paragraph simply start a line with **"\&nbsp; "**, that is the html code for "no break space" followed by a regular space bar key.  To quickly insert the "\&nbsp;" code press ``CTRL-SPACE`` on your keyboard while in the editor.  Then to make a tab, add a space after that.
+
+    &nbsp; &nbsp; Add the sequence multiple times to tab over further.
+
+
+&nbsp; To indent a whole paragraph simply start a line with **"\&nbsp; "**, that is the html code for "no break space" followed by a regular space bar key.  To quickly insert the "\&nbsp;" code press ``CTRL-SPACE`` on your keyboard while in the editor.  Then to make a tab, add a space after that.
+
+&nbsp; &nbsp; Add the sequence multiple times to tab over further.
+
 
 ## Footnotes
 ---
@@ -709,4 +801,4 @@ Here's a simple footnote,[^1] and here's a longer one.[^bignote]
     print("But why though?")
     ```
 
-    Add as many paragraphs as you like.
+    Add as many paragraphs as you like.&nbsp;
